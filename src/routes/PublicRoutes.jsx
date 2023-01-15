@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom"
-import Login from "../pages/login/Login"
+import loadable from "@loadable/component"
+
+const Login = loadable(() => import("../pages/login/Login"))
 
 const PublicRoutes = () => {
   return (

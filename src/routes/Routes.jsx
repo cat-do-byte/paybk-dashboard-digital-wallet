@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom"
-import LayoutDashboard from "../layouts/LayoutDashboard"
-import Dashboard from "../pages/Dashboard"
-import NotFound from "../pages/NotFound"
-import PublicRoutes from "./PublicRoutes"
+import loadable from "@loadable/component"
+
+const LayoutDashboard = loadable(() => import("../layouts/LayoutDashboard"))
+const Dashboard = loadable(() => import("../pages/Dashboard"))
+const NotFound = loadable(() => import("../pages/NotFound"))
+const PublicRoutes = loadable(() => import("./PublicRoutes"))
 
 const AppRoutes = () => {
   return (
